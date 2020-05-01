@@ -16,7 +16,7 @@ I recently experienced the following:
 The actual problem was the slow application behind Apache. The Accept Queue of Apache was full so the Linux kernel dropped SYN packets. Cloudflare published a fantastic blog post where they describe the insights of the Accept Queue (https://blog.cloudflare.com/syn-packet-handling-in-the-wild/. You should definitely read it before continuing.
 
 
-I created a [tmux script](tmux.sh) which starts a bunch of performance analysis tools. Then with `ab` (Apache Benchmark) we can send arbitrary concurrent requests to the backend. We can play with a different load and see how Linux behaves. I used [asciinema](https://asciinema.org/docs/getting-started) to record my terminal sessions.
+I created a [tmux script](tmux.sh) which starts a bunch of performance analysis tools. Then with `ab` (Apache Benchmark) we can send arbitrary concurrent requests to the backend. We can play with a different load and see how Linux behaves. I used [asciinema](https://asciinema.org/docs/getting-started) to record my terminal sessions and explain what happens.
 
 ### Explanation of the setup
 - vagrant VM with Ubuntu 18.04 and 1GB RAM
